@@ -1,6 +1,9 @@
-name: Generate Theme Index
+name: Validate Themes
 
 on:
+  pull_request:
+    paths:
+      - "themes/**.json"
   push:
     branches: [main]
     paths:
@@ -60,13 +63,16 @@ jobs:
               stem = os.path.splitext(os.path.basename(path))[0]
               file_errors = []
 
+              # filename must be lowercase kebab-case
               if stem != stem.lower() or not re.match(r"^[a-z0-9]+(-[a-z0-9]+)*$", stem):
                   file_errors.append(f"Filename '{stem}' must be lowercase kebab-case (e.g. my-cool-theme)")
 
+              # duplicate id check
               if stem in seen_ids:
                   file_errors.append(f"Duplicate theme id '{stem}' — already used by {seen_ids[stem]}")
               seen_ids[stem] = path
 
+              # parse JSON
               try:
                   with open(path) as f:
                       data = json.load(f)
@@ -74,13 +80,16 @@ jobs:
                   errors.append(f"{path}: Invalid JSON — {e}")
                   continue
 
+              # required top-level fields
               for field in ("name", "author", "type"):
                   if field not in data:
                       file_errors.append(f"Missing required field '{field}'")
 
+              # type value
               if "type" in data and data["type"] not in VALID_TYPES:
                   file_errors.append(f"'type' must be 'dark' or 'light', got '{data['type']}'")
 
+              # colors object
               colors = data.get("colors")
               if not isinstance(colors, dict):
                   file_errors.append("'colors' must be an object")
@@ -109,51 +118,3 @@ jobs:
 
           print(f"All {len(paths)} theme(s) passed validation.")
           EOF
-
-  generate:
-    runs-on: ubuntu-latest
-    needs: validate
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Generate index.json
-        run: |
-          python3 - <<'EOF'
-          import json
-          import glob
-          import os
-
-          themes = []
-          for path in sorted(glob.glob("themes/*.json")):
-              with open(path) as f:
-                  data = json.load(f)
-              stem = os.path.splitext(os.path.basename(path))[0]
-              themes.append({
-                  "id": stem,
-                  "name": data.get("name", stem),
-                  "version": data.get("version", "1.0.0"),
-                  "description": data.get("description", ""),
-                  "author": data.get("author", ""),
-                  "authorUrl": data.get("authorUrl", ""),
-                  "type": data.get("type", "dark"),
-                  "rawUrl": f"https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/{stem}.json"
-              })
-
-          themes.sort(key=lambda t: t["name"].lower())
-
-          with open("index.json", "w") as f:
-              json.dump(themes, f, indent=2)
-              f.write("\n")
-
-          print(f"Generated index.json with {len(themes)} theme(s).")
-          EOF
-
-      - name: Commit index.json
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.json
-          git diff --cached --quiet || git commit -m "chore: regenerate index.json"
-          git push
