@@ -1,0 +1,56 @@
+name: Generate Theme Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "themes/**.json"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate index.json
+        run: |
+          python3 - <<'EOF'
+          import json
+          import glob
+          import os
+
+          themes = []
+          for path in sorted(glob.glob("themes/*.json")):
+              with open(path) as f:
+                  data = json.load(f)
+              stem = os.path.splitext(os.path.basename(path))[0]
+              themes.append({
+                  "id": stem,
+                  "name": data.get("name", stem),
+                  "version": data.get("version", "1.0.0"),
+                  "description": data.get("description", ""),
+                  "author": data.get("author", ""),
+                  "authorUrl": data.get("authorUrl", ""),
+                  "type": data.get("type", "dark"),
+                  "rawUrl": f"https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/{stem}.json"
+              })
+
+          themes.sort(key=lambda t: t["name"].lower())
+
+          with open("index.json", "w") as f:
+              json.dump(themes, f, indent=2)
+              f.write("\n")
+
+          print(f"Generated index.json with {len(themes)} theme(s).")
+          EOF
+
+      - name: Commit index.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git diff --cached --quiet || git commit -m "chore: regenerate index.json"
+          git push

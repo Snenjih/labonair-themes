@@ -1,0 +1,32 @@
+[
+  {
+    "id": "catppuccin-mocha",
+    "name": "Catppuccin Mocha",
+    "version": "1.0.0",
+    "description": "Soothing pastel theme for Nexum",
+    "author": "Catppuccin",
+    "authorUrl": "https://github.com/catppuccin",
+    "type": "dark",
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/catppuccin-mocha.json"
+  },
+  {
+    "id": "nord",
+    "name": "Nord",
+    "version": "1.0.0",
+    "description": "An arctic, north-bluish color palette",
+    "author": "arcticicestudio",
+    "authorUrl": "https://github.com/arcticicestudio",
+    "type": "dark",
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/nord.json"
+  },
+  {
+    "id": "tokyo-night",
+    "name": "Tokyo Night",
+    "version": "1.0.0",
+    "description": "A clean, dark theme inspired by the lights of Downtown Tokyo at night",
+    "author": "enkia",
+    "authorUrl": "https://github.com/enkia",
+    "type": "dark",
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/tokyo-night.json"
+  }
+]
