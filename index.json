@@ -7,7 +7,13 @@
     "author": "teabyii",
     "authorUrl": "https://github.com/ayu-theme/ayu-colors",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/ayu-dark.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/ayu-dark.json",
+    "preview": {
+      "background": "#0a0e14",
+      "primary": "#e6b450",
+      "sidebar": "#0d1016",
+      "toolbar": "#0d1016"
+    }
   },
   {
     "id": "catppuccin-frappe",
@@ -17,7 +23,13 @@
     "author": "Catppuccin",
     "authorUrl": "https://github.com/catppuccin",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/catppuccin-frappe.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/catppuccin-frappe.json",
+    "preview": {
+      "background": "#303446",
+      "primary": "#ca9ee6",
+      "sidebar": "#292c3c",
+      "toolbar": "#292c3c"
+    }
   },
   {
     "id": "catppuccin-latte",
@@ -27,7 +39,13 @@
     "author": "Catppuccin",
     "authorUrl": "https://github.com/catppuccin",
     "type": "light",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/catppuccin-latte.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/catppuccin-latte.json",
+    "preview": {
+      "background": "#eff1f5",
+      "primary": "#8839ef",
+      "sidebar": "#e6e9ef",
+      "toolbar": "#e6e9ef"
+    }
   },
   {
     "id": "catppuccin-macchiato",
@@ -37,7 +55,13 @@
     "author": "Catppuccin",
     "authorUrl": "https://github.com/catppuccin",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/catppuccin-macchiato.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/catppuccin-macchiato.json",
+    "preview": {
+      "background": "#24273a",
+      "primary": "#c6a0f6",
+      "sidebar": "#1e2030",
+      "toolbar": "#1e2030"
+    }
   },
   {
     "id": "catppuccin-mocha",
@@ -47,7 +71,13 @@
     "author": "Catppuccin",
     "authorUrl": "https://github.com/catppuccin",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/catppuccin-mocha.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/catppuccin-mocha.json",
+    "preview": {
+      "background": "#1e1e2e",
+      "primary": "#cba6f7",
+      "sidebar": "#181825",
+      "toolbar": "#181825"
+    }
   },
   {
     "id": "colorizer",
@@ -57,7 +87,13 @@
     "author": "Md Tamim Hasan",
     "authorUrl": "",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/colorizer.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/colorizer.json",
+    "preview": {
+      "background": "#1e1e1e",
+      "primary": "#ffe66d",
+      "sidebar": "#252526",
+      "toolbar": "#252526"
+    }
   },
   {
     "id": "colorizer-pro",
@@ -67,7 +103,13 @@
     "author": "Md Tamim Hasan",
     "authorUrl": "",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/colorizer-pro.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/colorizer-pro.json",
+    "preview": {
+      "background": "#181c29",
+      "primary": "#50fa7b",
+      "sidebar": "#12141e",
+      "toolbar": "#12141e"
+    }
   },
   {
     "id": "dracula",
@@ -77,7 +119,13 @@
     "author": "Zeno Rocha",
     "authorUrl": "https://draculatheme.com",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/dracula.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/dracula.json",
+    "preview": {
+      "background": "#282a36",
+      "primary": "#bd93f9",
+      "sidebar": "#141119",
+      "toolbar": "#1e1925"
+    }
   },
   {
     "id": "dracula-light",
@@ -87,7 +135,13 @@
     "author": "Zeno Rocha",
     "authorUrl": "https://draculatheme.com",
     "type": "light",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/dracula-light.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/dracula-light.json",
+    "preview": {
+      "background": "#f5f5f5",
+      "primary": "#644ac9",
+      "sidebar": "#edeff4",
+      "toolbar": "#f6f6f6"
+    }
   },
   {
     "id": "github-dark",
@@ -97,7 +151,13 @@
     "author": "GitHub",
     "authorUrl": "https://github.com/primer/github-vscode-theme",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/github-dark.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/github-dark.json",
+    "preview": {
+      "background": "#0d1117",
+      "primary": "#58a6ff",
+      "sidebar": "#010409",
+      "toolbar": "#161b22"
+    }
   },
   {
     "id": "gruvbox",
@@ -107,7 +167,13 @@
     "author": "morhetz",
     "authorUrl": "https://github.com/morhetz/gruvbox",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/gruvbox.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/gruvbox.json",
+    "preview": {
+      "background": "#282828",
+      "primary": "#fabd2f",
+      "sidebar": "#1d2021",
+      "toolbar": "#1d2021"
+    }
   },
   {
     "id": "gruvbox-light",
@@ -117,7 +183,13 @@
     "author": "morhetz",
     "authorUrl": "https://github.com/morhetz/gruvbox",
     "type": "light",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/gruvbox-light.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/gruvbox-light.json",
+    "preview": {
+      "background": "#fbf1c7",
+      "primary": "#d79921",
+      "sidebar": "#f2e5bc",
+      "toolbar": "#f2e5bc"
+    }
   },
   {
     "id": "macos-classic-dark",
@@ -127,7 +199,13 @@
     "author": "huacnlee",
     "authorUrl": "",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/macos-classic-dark.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/macos-classic-dark.json",
+    "preview": {
+      "background": "#131313",
+      "primary": "#c28b12",
+      "sidebar": "#1e1d1e",
+      "toolbar": "#1e1d1e"
+    }
   },
   {
     "id": "macos-classic-light",
@@ -137,7 +215,13 @@
     "author": "huacnlee",
     "authorUrl": "",
     "type": "light",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/macos-classic-light.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/macos-classic-light.json",
+    "preview": {
+      "background": "#ffffff",
+      "primary": "#1f6ae2",
+      "sidebar": "#f9f9f9",
+      "toolbar": "#f7f7f7"
+    }
   },
   {
     "id": "material-dark",
@@ -147,7 +231,13 @@
     "author": "xerodark",
     "authorUrl": "",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/material-dark.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/material-dark.json",
+    "preview": {
+      "background": "#263238",
+      "primary": "#82b1ff",
+      "sidebar": "#263238",
+      "toolbar": "#37474f"
+    }
   },
   {
     "id": "monokai",
@@ -157,7 +247,13 @@
     "author": "Wimer Hazenberg",
     "authorUrl": "https://monokai.pro",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/monokai.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/monokai.json",
+    "preview": {
+      "background": "#2d2a2e",
+      "primary": "#ffd866",
+      "sidebar": "#221f22",
+      "toolbar": "#221f22"
+    }
   },
   {
     "id": "nord",
@@ -167,7 +263,13 @@
     "author": "arcticicestudio",
     "authorUrl": "https://github.com/arcticicestudio",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/nord.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/nord.json",
+    "preview": {
+      "background": "#2e3440",
+      "primary": "#5e81ac",
+      "sidebar": "#3b4252",
+      "toolbar": "#3b4252"
+    }
   },
   {
     "id": "one-dark",
@@ -177,7 +279,13 @@
     "author": "Atom",
     "authorUrl": "https://github.com/atom/one-dark-syntax",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/one-dark.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/one-dark.json",
+    "preview": {
+      "background": "#23272e",
+      "primary": "#61afef",
+      "sidebar": "#1e2227",
+      "toolbar": "#1e2227"
+    }
   },
   {
     "id": "one-light",
@@ -187,7 +295,13 @@
     "author": "Atom",
     "authorUrl": "https://github.com/atom/one-light-syntax",
     "type": "light",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/one-light.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/one-light.json",
+    "preview": {
+      "background": "#fafafa",
+      "primary": "#4078f2",
+      "sidebar": "#f0f0f0",
+      "toolbar": "#f0f0f0"
+    }
   },
   {
     "id": "snazzy",
@@ -197,7 +311,13 @@
     "author": "eivs",
     "authorUrl": "",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/snazzy.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/snazzy.json",
+    "preview": {
+      "background": "#282a36",
+      "primary": "#57c7ff",
+      "sidebar": "#2d2f3c",
+      "toolbar": "#2c2f3d"
+    }
   },
   {
     "id": "solarized-dark",
@@ -207,7 +327,13 @@
     "author": "Ethan Schoonover",
     "authorUrl": "https://ethanschoonover.com/solarized",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/solarized-dark.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/solarized-dark.json",
+    "preview": {
+      "background": "#002b36",
+      "primary": "#268bd2",
+      "sidebar": "#073642",
+      "toolbar": "#073642"
+    }
   },
   {
     "id": "solarized-light",
@@ -217,7 +343,13 @@
     "author": "Ethan Schoonover",
     "authorUrl": "https://ethanschoonover.com/solarized",
     "type": "light",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/solarized-light.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/solarized-light.json",
+    "preview": {
+      "background": "#fdf6e3",
+      "primary": "#268bd2",
+      "sidebar": "#eee8d5",
+      "toolbar": "#eee8d5"
+    }
   },
   {
     "id": "tokyo-night",
@@ -227,7 +359,13 @@
     "author": "enkia",
     "authorUrl": "https://github.com/enkia",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/tokyo-night.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/tokyo-night.json",
+    "preview": {
+      "background": "#1a1b26",
+      "primary": "#7aa2f7",
+      "sidebar": "#16161e",
+      "toolbar": "#16161e"
+    }
   },
   {
     "id": "vscode-dark-modern",
@@ -237,6 +375,12 @@
     "author": "kcamcam",
     "authorUrl": "",
     "type": "dark",
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/vscode-dark-modern.json"
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/vscode-dark-modern.json",
+    "preview": {
+      "background": "#1f1f1f",
+      "primary": "#0078d4",
+      "sidebar": "#181818",
+      "toolbar": "#202020"
+    }
   }
 ]
