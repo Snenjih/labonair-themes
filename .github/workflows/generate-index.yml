@@ -22,32 +22,23 @@ jobs:
           import re
           import sys
 
-          REQUIRED_KEYS = [
-              "background", "foreground",
-              "card", "card-foreground",
-              "popover", "popover-foreground",
-              "primary", "primary-foreground",
-              "secondary", "secondary-foreground",
-              "muted", "muted-foreground",
-              "accent", "accent-foreground",
-              "destructive",
-              "border", "input", "ring",
+          # All individual color keys are optional; only name/author/type/colors are required.
+          # Old underscore terminal keys are accepted but emit a warning.
+          LEGACY_TERMINAL_KEYS = {
               "terminal_background", "terminal_foreground",
               "terminal_black", "terminal_red", "terminal_green", "terminal_yellow",
               "terminal_blue", "terminal_magenta", "terminal_cyan", "terminal_white",
               "terminal_bright_black", "terminal_bright_red", "terminal_bright_green",
               "terminal_bright_yellow", "terminal_bright_blue", "terminal_bright_magenta",
               "terminal_bright_cyan", "terminal_bright_white",
-              "sidebar", "sidebar-foreground",
-              "sidebar-primary", "sidebar-primary-foreground",
-              "sidebar-accent", "sidebar-accent-foreground",
-              "sidebar-border", "sidebar-ring",
-          ]
+          }
 
-          HEX_RE = re.compile(r"^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$")
+          # Accepts: #RGB, #RRGGBB, #RRGGBBAA
+          HEX_RE = re.compile(r"^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$")
           VALID_TYPES = {"dark", "light"}
 
           errors = []
+          warnings = []
 
           paths = sorted(glob.glob("themes/*.json"))
           if not paths:
@@ -59,6 +50,7 @@ jobs:
           for path in paths:
               stem = os.path.splitext(os.path.basename(path))[0]
               file_errors = []
+              file_warnings = []
 
               if stem != stem.lower() or not re.match(r"^[a-z0-9]+(-[a-z0-9]+)*$", stem):
                   file_errors.append(f"Filename '{stem}' must be lowercase kebab-case (e.g. my-cool-theme)")
@@ -85,9 +77,11 @@ jobs:
               if not isinstance(colors, dict):
                   file_errors.append("'colors' must be an object")
               else:
-                  missing = [k for k in REQUIRED_KEYS if k not in colors]
-                  if missing:
-                      file_errors.append(f"Missing color keys: {', '.join(missing)}")
+                  legacy = [k for k in colors if k in LEGACY_TERMINAL_KEYS]
+                  if legacy:
+                      file_warnings.append(
+                          f"Legacy v1 terminal keys found (migrate to dot-notation): {', '.join(sorted(legacy))}"
+                      )
 
                   invalid_hex = [
                       f"{k}={v!r}"
@@ -95,12 +89,22 @@ jobs:
                       if not (isinstance(v, str) and HEX_RE.match(v))
                   ]
                   if invalid_hex:
-                      file_errors.append(f"Invalid HEX values: {', '.join(invalid_hex)}")
+                      file_errors.append(f"Invalid color values (expected #RGB / #RRGGBB / #RRGGBBAA): {', '.join(invalid_hex)}")
 
               if file_errors:
                   errors.append(f"\n{path}:")
                   for e in file_errors:
-                      errors.append(f"  - {e}")
+                      errors.append(f"  ERROR: {e}")
+
+              if file_warnings:
+                  warnings.append(f"\n{path}:")
+                  for w in file_warnings:
+                      warnings.append(f"  WARNING: {w}")
+
+          if warnings:
+              print("Theme validation warnings:\n")
+              print("\n".join(warnings))
+              print()
 
           if errors:
               print("Theme validation FAILED:\n")
@@ -130,6 +134,17 @@ jobs:
               with open(path) as f:
                   data = json.load(f)
               stem = os.path.splitext(os.path.basename(path))[0]
+              colors = data.get("colors", {})
+
+              # Prefer v2 dot-notation keys; fall back to legacy underscore keys for thumbnail fields
+              background      = colors.get("background", "")
+              primary         = colors.get("primary", "")
+              sidebar_bg      = (
+                  colors.get("sidebar.background") or
+                  colors.get("sidebar", "")
+              )
+              toolbar_bg      = colors.get("toolbar.background", sidebar_bg)
+
               themes.append({
                   "id": stem,
                   "name": data.get("name", stem),
@@ -138,7 +153,13 @@ jobs:
                   "author": data.get("author", ""),
                   "authorUrl": data.get("authorUrl", ""),
                   "type": data.get("type", "dark"),
-                  "rawUrl": f"https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/{stem}.json"
+                  "rawUrl": f"https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/{stem}.json",
+                  "preview": {
+                      "background": background,
+                      "primary": primary,
+                      "sidebar": sidebar_bg,
+                      "toolbar": toolbar_bg,
+                  },
               })
 
           themes.sort(key=lambda t: t["name"].lower())
