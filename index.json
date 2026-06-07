@@ -16,6 +16,38 @@
     }
   },
   {
+    "id": "caffeine-dark",
+    "name": "Caffeine Dark",
+    "version": "1.0.0",
+    "description": "Warm coffee tones \u2014 cream and espresso",
+    "author": "Nexum",
+    "authorUrl": "",
+    "type": "dark",
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/caffeine-dark.json",
+    "preview": {
+      "background": "#111111",
+      "primary": "#ffe0c2",
+      "sidebar": "#18181b",
+      "toolbar": "#191919"
+    }
+  },
+  {
+    "id": "caffeine-light",
+    "name": "Caffeine Light",
+    "version": "1.0.0",
+    "description": "Warm coffee tones \u2014 cream and espresso",
+    "author": "Nexum",
+    "authorUrl": "",
+    "type": "light",
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/caffeine-light.json",
+    "preview": {
+      "background": "#f9f9f9",
+      "primary": "#644a40",
+      "sidebar": "#fbfbfb",
+      "toolbar": "#fcfcfc"
+    }
+  },
+  {
     "id": "catppuccin-frappe",
     "name": "Catppuccin Frapp\u00e9",
     "version": "1.0.0",
@@ -77,6 +109,38 @@
       "primary": "#cba6f7",
       "sidebar": "#181825",
       "toolbar": "#181825"
+    }
+  },
+  {
+    "id": "claude-dark",
+    "name": "Claude Dark",
+    "version": "1.0.0",
+    "description": "Warm clay accent on dark paper \u2014 inspired by Claude's visual identity",
+    "author": "Anthropic",
+    "authorUrl": "https://anthropic.com",
+    "type": "dark",
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/claude-dark.json",
+    "preview": {
+      "background": "#1f1e1d",
+      "primary": "#d97757",
+      "sidebar": "#1a1918",
+      "toolbar": "#262624"
+    }
+  },
+  {
+    "id": "claude-light",
+    "name": "Claude Light",
+    "version": "1.0.0",
+    "description": "Warm clay accent on paper \u2014 inspired by Claude's visual identity",
+    "author": "Anthropic",
+    "authorUrl": "https://anthropic.com",
+    "type": "light",
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/claude-light.json",
+    "preview": {
+      "background": "#faf9f5",
+      "primary": "#c15f3c",
+      "sidebar": "#f5f4ee",
+      "toolbar": "#ffffff"
     }
   },
   {
@@ -163,7 +227,7 @@
     "id": "gruvbox",
     "name": "Gruvbox",
     "version": "1.0.0",
-    "description": "Retro groove color scheme with warm earthy tones",
+    "description": "Warm, earthy retro palette",
     "author": "morhetz",
     "authorUrl": "https://github.com/morhetz/gruvbox",
     "type": "dark",
@@ -172,23 +236,23 @@
       "background": "#282828",
       "primary": "#fabd2f",
       "sidebar": "#1d2021",
-      "toolbar": "#1d2021"
+      "toolbar": "#32302f"
     }
   },
   {
     "id": "gruvbox-light",
     "name": "Gruvbox Light",
     "version": "1.0.0",
-    "description": "Retro groove color scheme \u2014 warm paper-like light variant",
+    "description": "Warm, earthy retro palette \u2014 paper light variant",
     "author": "morhetz",
     "authorUrl": "https://github.com/morhetz/gruvbox",
     "type": "light",
     "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/gruvbox-light.json",
     "preview": {
       "background": "#fbf1c7",
-      "primary": "#d79921",
+      "primary": "#b57614",
       "sidebar": "#f2e5bc",
-      "toolbar": "#f2e5bc"
+      "toolbar": "#f9f5d7"
     }
   },
   {
@@ -301,6 +365,38 @@
       "primary": "#4078f2",
       "sidebar": "#f0f0f0",
       "toolbar": "#f0f0f0"
+    }
+  },
+  {
+    "id": "sage-dark",
+    "name": "Sage Dark",
+    "version": "1.0.0",
+    "description": "Muted forest green \u2014 calm and soft",
+    "author": "Nexum",
+    "authorUrl": "",
+    "type": "dark",
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/sage-dark.json",
+    "preview": {
+      "background": "#1c211e",
+      "primary": "#a7c080",
+      "sidebar": "#181c1a",
+      "toolbar": "#222824"
+    }
+  },
+  {
+    "id": "sage-light",
+    "name": "Sage Light",
+    "version": "1.0.0",
+    "description": "Muted forest green \u2014 calm and soft",
+    "author": "Nexum",
+    "authorUrl": "",
+    "type": "light",
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/sage-light.json",
+    "preview": {
+      "background": "#f4f6f0",
+      "primary": "#5a7a3f",
+      "sidebar": "#eef1e8",
+      "toolbar": "#ffffff"
     }
   },
   {
