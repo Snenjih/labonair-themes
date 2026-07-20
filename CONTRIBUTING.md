@@ -1,23 +1,50 @@
-# Contributing to nexum-themes
+# Contributing to labonair-themes
 
 ## Theme Naming Rules
 
-- The filename is the theme's `id` inside the Nexum app — use **lowercase kebab-case only** (e.g. `my-cool-theme.json`).
+- The filename is the theme's `id` inside the Labonair app — use **lowercase kebab-case only** (e.g. `my-cool-theme.json`).
 - Renaming a file after release breaks existing user installs. Choose the name carefully.
+- Themes bundle both light and dark in one file now — don't create `-dark`/`-light` filename pairs. Use a single unsuffixed name (e.g. `dracula.json`, not `dracula-dark.json` + `dracula-light.json`).
 
 ## Required Fields
 
 Every theme must include these top-level fields:
 
 ```
-name, author, type, colors
+name, variants
 ```
 
-The `type` field must be exactly `"dark"` or `"light"`.
+`variants` is an object of variant-key → variant-definition. Each variant requires `mode` (`"dark"` or `"light"`) and `colors`. A file is only valid if `variants` contains **at least one `"dark"`-mode entry and at least one `"light"`-mode entry** — see [`theme.schema.json`](./theme.schema.json) for the full JSON Schema.
 
-## Color Keys (v2)
+```json
+{
+  "name": "My Theme",
+  "author": "Your Name",
+  "variants": {
+    "dark": { "mode": "dark", "colors": { "...": "..." } },
+    "light": { "mode": "light", "colors": { "...": "..." } }
+  }
+}
+```
 
-All individual color keys are **optional** — the app falls back to CSS defaults for any missing key. Well-crafted themes should define all of them. The full key list is documented in [README.md](./README.md#color-key-reference-v2).
+### Theme families with more than one variant per mode
+
+Some themes (Catppuccin) ship several variants that share a mode — e.g. three `"dark"`-mode variants of differing contrast. Add extra keys to `variants` beyond `dark`/`light`, each with its own `mode` and an optional `label` for display:
+
+```json
+"variants": {
+  "latte":     { "mode": "light", "label": "Latte",     "colors": { "...": "..." } },
+  "frappe":    { "mode": "dark",  "label": "Frappé",     "colors": { "...": "..." } },
+  "macchiato": { "mode": "dark",  "label": "Macchiato",  "colors": { "...": "..." } },
+  "mocha":     { "mode": "dark",  "label": "Mocha",      "colors": { "...": "..." } }
+}
+```
+
+The app shows a small variant picker automatically whenever more than one variant shares the active mode.
+
+## Color Keys (v3)
+
+All individual color keys are **optional** per variant — the app falls back to CSS defaults for any missing key. Well-crafted themes should define all of them, in every variant. The full key list is documented in [README.md](./README.md#color-key-reference-v3).
 
 ### Notation
 
@@ -26,7 +53,7 @@ All individual color keys are **optional** — the app falls back to CSS default
 
 ### Legacy key names (v1)
 
-The Nexum app accepts both old and new key names for backward compatibility. However, all themes in this repository should use v2 dot-notation keys. Old underscore terminal keys (e.g. `terminal_black`) will trigger a **CI warning** on new PRs — please migrate them to `terminal.ansi.black` etc.
+The Labonair app accepts both old and new key names for backward compatibility. However, all themes in this repository should use v2 dot-notation keys within each variant's `colors`. Old underscore terminal keys (e.g. `terminal_black`) will trigger a **CI warning** on new PRs — please migrate them to `terminal.ansi.black` etc.
 
 | Old key (v1) | New key (v2) |
 |---|---|
@@ -54,7 +81,7 @@ All values **must** be HEX strings. Supported formats:
 - `#RRGGBB` — standard 6-digit hex
 - `#RRGGBBAA` — 8-digit hex with alpha (only for `selection` and `border.transparent`)
 
-Do not use HSL, RGB, or named colors. The Nexum app converts HEX to HSL internally.
+Do not use HSL, RGB, or named colors. The Labonair app converts HEX to HSL internally.
 
 ## Optional Metadata Fields
 
@@ -64,21 +91,25 @@ Do not use HSL, RGB, or named colors. The Nexum app converts HEX to HSL internal
 "authorUrl": "https://github.com/yourname"
 ```
 
+Per-variant, an optional `"label"` overrides the display name shown in the variant picker (defaults to the variant key, capitalized).
+
 ## How CI Works
 
 When a PR is merged to `main`, the GitHub Actions workflow in `.github/workflows/generate-index.yml` automatically regenerates `index.json`. **Never manually edit `index.json`** — your changes will be overwritten.
 
 The validator (`validate-themes.yml`) checks:
 - Valid JSON
-- Required top-level fields (`name`, `author`, `type`, `colors`)
-- `type` is `"dark"` or `"light"`
+- Required top-level fields (`name`, `variants`)
+- `variants` is a non-empty object where every entry has a valid `mode` (`"dark"` or `"light"`) and a `colors` object
+- At least one `"dark"`-mode and one `"light"`-mode variant is present
 - All color values are valid hex strings
 - Emits a **warning** (not an error) for legacy v1 underscore terminal keys
 
 ## PR Checklist
 
-- [ ] Filename is lowercase kebab-case
-- [ ] `name`, `author`, and `type` fields are present
+- [ ] Filename is lowercase kebab-case, with no `-dark`/`-light` suffix
+- [ ] `name` and `variants` fields are present
+- [ ] `variants` includes at least one `"dark"`-mode and one `"light"`-mode entry
 - [ ] All color values are valid HEX strings (`#RGB`, `#RRGGBB`, or `#RRGGBBAA`)
 - [ ] Color keys use v2 dot-notation (no `terminal_black` etc.)
 - [ ] The JSON is valid (run `python3 -m json.tool themes/your-theme.json`)

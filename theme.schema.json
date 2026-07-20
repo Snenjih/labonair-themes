@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/theme.schema.json",
+  "title": "Labonair Theme",
+  "description": "A Labonair theme bundles one or more named color variants, each tagged with a mode. A file is only valid if it defines at least one variant with mode \"dark\" and at least one with mode \"light\" — this cross-field constraint cannot be fully expressed in JSON Schema alone and is additionally enforced by the CI validator in .github/workflows/validate-themes.yml.",
+  "type": "object",
+  "required": ["name", "variants"],
+  "additionalProperties": true,
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "author": { "type": "string" },
+    "authorUrl": { "type": "string" },
+    "version": { "type": "string" },
+    "description": { "type": "string" },
+    "variants": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "$ref": "#/$defs/variant" }
+    }
+  },
+  "$defs": {
+    "variant": {
+      "type": "object",
+      "required": ["mode", "colors"],
+      "additionalProperties": false,
+      "properties": {
+        "mode": { "type": "string", "enum": ["light", "dark"] },
+        "label": { "type": "string" },
+        "colors": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/hexColor" }
+        }
+      }
+    },
+    "hexColor": {
+      "type": "string",
+      "pattern": "^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+    }
+  }
+}

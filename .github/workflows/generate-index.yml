@@ -22,8 +22,6 @@ jobs:
           import re
           import sys
 
-          # All individual color keys are optional; only name/author/type/colors are required.
-          # Old underscore terminal keys are accepted but emit a warning.
           LEGACY_TERMINAL_KEYS = {
               "terminal_background", "terminal_foreground",
               "terminal_black", "terminal_red", "terminal_green", "terminal_yellow",
@@ -33,9 +31,8 @@ jobs:
               "terminal_bright_cyan", "terminal_bright_white",
           }
 
-          # Accepts: #RGB, #RRGGBB, #RRGGBBAA
           HEX_RE = re.compile(r"^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$")
-          VALID_TYPES = {"dark", "light"}
+          VALID_MODES = {"dark", "light"}
 
           errors = []
           warnings = []
@@ -66,30 +63,56 @@ jobs:
                   errors.append(f"{path}: Invalid JSON — {e}")
                   continue
 
-              for field in ("name", "author", "type"):
+              for field in ("name", "variants"):
                   if field not in data:
                       file_errors.append(f"Missing required field '{field}'")
 
-              if "type" in data and data["type"] not in VALID_TYPES:
-                  file_errors.append(f"'type' must be 'dark' or 'light', got '{data['type']}'")
-
-              colors = data.get("colors")
-              if not isinstance(colors, dict):
-                  file_errors.append("'colors' must be an object")
+              variants = data.get("variants")
+              if not isinstance(variants, dict) or not variants:
+                  file_errors.append("'variants' must be a non-empty object")
               else:
-                  legacy = [k for k in colors if k in LEGACY_TERMINAL_KEYS]
-                  if legacy:
-                      file_warnings.append(
-                          f"Legacy v1 terminal keys found (migrate to dot-notation): {', '.join(sorted(legacy))}"
-                      )
+                  modes_seen = set()
+                  for key, variant in variants.items():
+                      if not isinstance(variant, dict):
+                          file_errors.append(f"variants.{key} must be an object")
+                          continue
 
-                  invalid_hex = [
-                      f"{k}={v!r}"
-                      for k, v in colors.items()
-                      if not (isinstance(v, str) and HEX_RE.match(v))
-                  ]
-                  if invalid_hex:
-                      file_errors.append(f"Invalid color values (expected #RGB / #RRGGBB / #RRGGBBAA): {', '.join(invalid_hex)}")
+                      mode = variant.get("mode")
+                      if mode not in VALID_MODES:
+                          file_errors.append(
+                              f"variants.{key}.mode must be 'dark' or 'light', got {mode!r}"
+                          )
+                      else:
+                          modes_seen.add(mode)
+
+                      colors = variant.get("colors")
+                      if not isinstance(colors, dict):
+                          file_errors.append(f"variants.{key}.colors must be an object")
+                          continue
+
+                      legacy = [k for k in colors if k in LEGACY_TERMINAL_KEYS]
+                      if legacy:
+                          file_warnings.append(
+                              f"variants.{key}: legacy v1 terminal keys found (migrate to dot-notation): "
+                              f"{', '.join(sorted(legacy))}"
+                          )
+
+                      invalid_hex = [
+                          f"{k}={v!r}"
+                          for k, v in colors.items()
+                          if not (isinstance(v, str) and HEX_RE.match(v))
+                      ]
+                      if invalid_hex:
+                          file_errors.append(
+                              f"variants.{key}: invalid color values (expected #RGB / #RRGGBB / #RRGGBBAA): "
+                              f"{', '.join(invalid_hex)}"
+                          )
+
+                  if "dark" not in modes_seen or "light" not in modes_seen:
+                      file_errors.append(
+                          "'variants' must include at least one entry with mode \"dark\" and one with mode \"light\" "
+                          f"(found: {sorted(modes_seen) or 'none'})"
+                      )
 
               if file_errors:
                   errors.append(f"\n{path}:")
@@ -129,21 +152,35 @@ jobs:
           import glob
           import os
 
+          def preview_for_mode(variants, mode):
+              """Pick the first variant matching `mode` and extract its thumbnail colors."""
+              for variant in variants.values():
+                  if variant.get("mode") != mode:
+                      continue
+                  colors = variant.get("colors", {})
+                  sidebar_bg = colors.get("sidebar.background") or colors.get("sidebar", "")
+                  return {
+                      "background": colors.get("background", ""),
+                      "primary": colors.get("primary", ""),
+                      "sidebar": sidebar_bg,
+                      "toolbar": colors.get("toolbar.background", sidebar_bg),
+                  }
+              return None
+
           themes = []
           for path in sorted(glob.glob("themes/*.json")):
               with open(path) as f:
                   data = json.load(f)
               stem = os.path.splitext(os.path.basename(path))[0]
-              colors = data.get("colors", {})
+              variants = data.get("variants", {})
 
-              # Prefer v2 dot-notation keys; fall back to legacy underscore keys for thumbnail fields
-              background      = colors.get("background", "")
-              primary         = colors.get("primary", "")
-              sidebar_bg      = (
-                  colors.get("sidebar.background") or
-                  colors.get("sidebar", "")
-              )
-              toolbar_bg      = colors.get("toolbar.background", sidebar_bg)
+              preview = {}
+              dark_preview = preview_for_mode(variants, "dark")
+              light_preview = preview_for_mode(variants, "light")
+              if dark_preview:
+                  preview["dark"] = dark_preview
+              if light_preview:
+                  preview["light"] = light_preview
 
               themes.append({
                   "id": stem,
@@ -152,14 +189,9 @@ jobs:
                   "description": data.get("description", ""),
                   "author": data.get("author", ""),
                   "authorUrl": data.get("authorUrl", ""),
-                  "type": data.get("type", "dark"),
-                  "rawUrl": f"https://raw.githubusercontent.com/Snenjih/nexum-themes/main/themes/{stem}.json",
-                  "preview": {
-                      "background": background,
-                      "primary": primary,
-                      "sidebar": sidebar_bg,
-                      "toolbar": toolbar_bg,
-                  },
+                  "variantCount": len(variants),
+                  "rawUrl": f"https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/{stem}.json",
+                  "preview": preview,
               })
 
           themes.sort(key=lambda t: t["name"].lower())
