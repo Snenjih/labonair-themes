@@ -1,5 +1,53 @@
 [
   {
+    "id": "alabaster",
+    "name": "Alabaster",
+    "version": "1.0.0",
+    "description": "Sehr reduziertes, fast monochromes Schema von Nikita Prokopov (tonsky) \u2014 minimalistischer Klassiker.",
+    "author": "Nikita Prokopov",
+    "authorUrl": "https://github.com/tonsky/vscode-theme-alabaster",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/alabaster.json",
+    "preview": {
+      "dark": {
+        "background": "#1c1c1c",
+        "primary": "#5b7fd4",
+        "sidebar": "#141414",
+        "toolbar": "#242424"
+      },
+      "light": {
+        "background": "#F7F7F7",
+        "primary": "#325CC0",
+        "sidebar": "#f2f2f2",
+        "toolbar": "#F0F0F0"
+      }
+    }
+  },
+  {
+    "id": "andromeda",
+    "name": "Andromeda",
+    "version": "1.0.0",
+    "description": "Dunkles, sattes Schema von EliverLara mit kr\u00e4ftigen Neonakzenten \u2014 sehr popul\u00e4res VS-Code-Theme.",
+    "author": "Eliver Lara",
+    "authorUrl": "https://github.com/EliverLara/Andromeda",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/andromeda.json",
+    "preview": {
+      "dark": {
+        "background": "#23262E",
+        "primary": "#7cb7ff",
+        "sidebar": "#1c1f25",
+        "toolbar": "#1a1c23"
+      },
+      "light": {
+        "background": "#f2f0f5",
+        "primary": "#499bff",
+        "sidebar": "#edeaf1",
+        "toolbar": "#e5e1eb"
+      }
+    }
+  },
+  {
     "id": "ayu",
     "name": "Ayu",
     "version": "1.0.0",
@@ -20,6 +68,54 @@
         "primary": "#fa8d3e",
         "sidebar": "#f3f4f5",
         "toolbar": "#f3f4f5"
+      }
+    }
+  },
+  {
+    "id": "base16-default",
+    "name": "Base16 Default",
+    "version": "1.0.0",
+    "description": "Das urspr\u00fcngliche, namensgebende Base16-Schema von Chris Kempson \u2014 Grundlage unz\u00e4hliger Ableger.",
+    "author": "Chris Kempson",
+    "authorUrl": "https://github.com/chriskempson/base16-default-schemes",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/base16-default.json",
+    "preview": {
+      "dark": {
+        "background": "#181818",
+        "primary": "#7cafc2",
+        "sidebar": "#101010",
+        "toolbar": "#282828"
+      },
+      "light": {
+        "background": "#f8f8f8",
+        "primary": "#7cafc2",
+        "sidebar": "#f3f3f3",
+        "toolbar": "#e8e8e8"
+      }
+    }
+  },
+  {
+    "id": "bluloco",
+    "name": "Bluloco",
+    "version": "1.0.0",
+    "description": "Sehr lebendige, vivid Farbpalette von Uloco \u2014 h\u00e4ufig in Neovim-/Alacritty-Dotfiles zu finden.",
+    "author": "Uloco",
+    "authorUrl": "https://github.com/uloco/theme-bluloco-dark",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/bluloco.json",
+    "preview": {
+      "dark": {
+        "background": "#282c34",
+        "primary": "#3375fe",
+        "sidebar": "#21252b",
+        "toolbar": "#22252a"
+      },
+      "light": {
+        "background": "#f9f9f9",
+        "primary": "#275fe4",
+        "sidebar": "#f4f4f4",
+        "toolbar": "#e8e8e8"
       }
     }
   },
@@ -72,6 +168,30 @@
     }
   },
   {
+    "id": "city-lights",
+    "name": "City Lights",
+    "version": "1.0.0",
+    "description": "Dezentes Blaugrau-Schema mit Fokus auf Lesbarkeit von Yummygum, popul\u00e4r als VS-Code-/Atom-Port.",
+    "author": "Yummygum",
+    "authorUrl": "https://github.com/Yummygum/city-lights-syntax-vsc",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/city-lights.json",
+    "preview": {
+      "dark": {
+        "background": "#1D252C",
+        "primary": "#539afc",
+        "sidebar": "#171d23",
+        "toolbar": "#171d23"
+      },
+      "light": {
+        "background": "#eef2f5",
+        "primary": "#3a8bfc",
+        "sidebar": "#e8edf1",
+        "toolbar": "#dfe6ec"
+      }
+    }
+  },
+  {
     "id": "claude",
     "name": "Claude",
     "version": "1.0.0",
@@ -92,6 +212,30 @@
         "primary": "#c15f3c",
         "sidebar": "#f5f4ee",
         "toolbar": "#ffffff"
+      }
+    }
+  },
+  {
+    "id": "cobalt2",
+    "name": "Cobalt2",
+    "version": "1.0.0",
+    "description": "Kr\u00e4ftiges, fast fluoreszierendes Blau/Gelb-Schema von Wes Bos \u2014 einer der meistinstallierten VS-Code-Dauerbrenner.",
+    "author": "Wes Bos",
+    "authorUrl": "https://github.com/wesbos/cobalt2-vscode",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/cobalt2.json",
+    "preview": {
+      "dark": {
+        "background": "#193549",
+        "primary": "#0088ff",
+        "sidebar": "#152d3e",
+        "toolbar": "#15232d"
+      },
+      "light": {
+        "background": "#eaf3f8",
+        "primary": "#006dcc",
+        "sidebar": "#e2eff5",
+        "toolbar": "#d7e8f0"
       }
     }
   },
@@ -144,6 +288,54 @@
     }
   },
   {
+    "id": "darcula",
+    "name": "Darcula",
+    "version": "1.0.0",
+    "description": "Das Standard-Dark-Theme aller JetBrains-IDEs (IntelliJ, PyCharm, WebStorm) \u2014 extrem bekannt, viele Terminal-Ports.",
+    "author": "JetBrains",
+    "authorUrl": "https://www.jetbrains.com",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/darcula.json",
+    "preview": {
+      "dark": {
+        "background": "#2b2b2b",
+        "primary": "#cc7832",
+        "sidebar": "#232323",
+        "toolbar": "#323232"
+      },
+      "light": {
+        "background": "#f2f2f2",
+        "primary": "#a36028",
+        "sidebar": "#ededed",
+        "toolbar": "#e6e6e6"
+      }
+    }
+  },
+  {
+    "id": "doom-one",
+    "name": "Doom One",
+    "version": "1.0.0",
+    "description": "Signature-Dark-Theme des popul\u00e4ren Emacs-Frameworks \u201eDoom Emacs\u201c (inspiriert von Atom One Dark).",
+    "author": "Henrik Lissner (doomemacs)",
+    "authorUrl": "https://github.com/doomemacs/themes",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/doom-one.json",
+    "preview": {
+      "dark": {
+        "background": "#282c34",
+        "primary": "#51afef",
+        "sidebar": "#21252b",
+        "toolbar": "#21242b"
+      },
+      "light": {
+        "background": "#fafafa",
+        "primary": "#2c9eec",
+        "sidebar": "#f5f5f5",
+        "toolbar": "#ececec"
+      }
+    }
+  },
+  {
     "id": "dracula",
     "name": "Dracula",
     "version": "1.0.0",
@@ -164,6 +356,102 @@
         "primary": "#644ac9",
         "sidebar": "#edeff4",
         "toolbar": "#f6f6f6"
+      }
+    }
+  },
+  {
+    "id": "edge",
+    "name": "Edge",
+    "version": "1.0.0",
+    "description": "Flaches Companion-Theme zu Sonokai/Everforest von sainnhe mit klaren, reduzierten Farben.",
+    "author": "Sainnhe Park",
+    "authorUrl": "https://github.com/sainnhe/edge",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/edge.json",
+    "preview": {
+      "dark": {
+        "background": "#262729",
+        "primary": "#73b3e7",
+        "sidebar": "#1f1f21",
+        "toolbar": "#313235"
+      },
+      "light": {
+        "background": "#fafafa",
+        "primary": "#6587bf",
+        "sidebar": "#f5f5f5",
+        "toolbar": "#e3e5e8"
+      }
+    }
+  },
+  {
+    "id": "everblush",
+    "name": "Everblush",
+    "version": "1.0.0",
+    "description": "Sanftes, warmes Pastell-Dark-Theme mit wachsender Beliebtheit als Terminal- und Editor-Port.",
+    "author": "Everblush",
+    "authorUrl": "https://github.com/Everblush/everblush",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/everblush.json",
+    "preview": {
+      "dark": {
+        "background": "#141b1e",
+        "primary": "#67b0e8",
+        "sidebar": "#0e1315",
+        "toolbar": "#12191c"
+      },
+      "light": {
+        "background": "#f2f0e6",
+        "primary": "#51a4e5",
+        "sidebar": "#efecdf",
+        "toolbar": "#e6e2d2"
+      }
+    }
+  },
+  {
+    "id": "everforest",
+    "name": "Everforest",
+    "version": "1.0.0",
+    "description": "Warmes, waldig-gr\u00fcnes Low-Contrast-Schema von sainnhe, beliebt in Neovim und Terminals.",
+    "author": "Sainnhe Park",
+    "authorUrl": "https://github.com/sainnhe/everforest",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/everforest.json",
+    "preview": {
+      "dark": {
+        "background": "#2d353b",
+        "primary": "#a7c080",
+        "sidebar": "#262d32",
+        "toolbar": "#343f44"
+      },
+      "light": {
+        "background": "#fdf6e3",
+        "primary": "#8da101",
+        "sidebar": "#fcf3d9",
+        "toolbar": "#f4f0d9"
+      }
+    }
+  },
+  {
+    "id": "firewatch",
+    "name": "Firewatch",
+    "version": "1.0.0",
+    "description": "Vom Videospiel \u201eFirewatch\u201c inspiriertes warmes Orange/Rot-Schema, urspr\u00fcnglich ein Atom-Syntax-Theme, breit portiert.",
+    "author": "Sebastian Szturo",
+    "authorUrl": "https://github.com/SebastianSzturo/firewatch-syntax",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/firewatch.json",
+    "preview": {
+      "dark": {
+        "background": "#1e2027",
+        "primary": "#4d89c4",
+        "sidebar": "#17191e",
+        "toolbar": "#282b33"
+      },
+      "light": {
+        "background": "#f5f1e8",
+        "primary": "#3a75ae",
+        "sidebar": "#f2ede1",
+        "toolbar": "#ebe4d3"
       }
     }
   },
@@ -216,6 +504,102 @@
     }
   },
   {
+    "id": "hopscotch",
+    "name": "Hopscotch",
+    "version": "1.0.0",
+    "description": "Retro-buntes Dark-Schema von Jan T. Sott, langj\u00e4hriger Klassiker der iTerm2-Color-Schemes-Sammlung.",
+    "author": "Jan T. Sott",
+    "authorUrl": "https://github.com/idleberg/Hopscotch.tmTheme",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/hopscotch.json",
+    "preview": {
+      "dark": {
+        "background": "#322931",
+        "primary": "#1290bf",
+        "sidebar": "#2a2229",
+        "toolbar": "#433b42"
+      },
+      "light": {
+        "background": "#f5f1f4",
+        "primary": "#0e749a",
+        "sidebar": "#f1ebef",
+        "toolbar": "#e8e1e6"
+      }
+    }
+  },
+  {
+    "id": "horizon",
+    "name": "Horizon",
+    "version": "1.0.0",
+    "description": "Warmes Dark-Theme mit Rosa/Orange-Akzenten von Micha\u00ebl Ball, inklusive offizieller \u201eHorizon Bright\u201c-Lichtvariante.",
+    "author": "Micha\u00ebl Ball",
+    "authorUrl": "https://github.com/michael-ball/horizon-theme",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/horizon.json",
+    "preview": {
+      "dark": {
+        "background": "#1c1e26",
+        "primary": "#df5273",
+        "sidebar": "#16171d",
+        "toolbar": "#232530"
+      },
+      "light": {
+        "background": "#fdf0ed",
+        "primary": "#da103f",
+        "sidebar": "#fce8e4",
+        "toolbar": "#fadad1"
+      }
+    }
+  },
+  {
+    "id": "iceberg",
+    "name": "Iceberg",
+    "version": "1.0.0",
+    "description": "Ruhiges, bl\u00e4uliches Low-Saturation-Schema von cocopon \u2014 sehr verbreitet in Neovim, mit offizieller Light-Variante.",
+    "author": "cocopon",
+    "authorUrl": "https://github.com/cocopon/iceberg.vim",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/iceberg.json",
+    "preview": {
+      "dark": {
+        "background": "#161821",
+        "primary": "#84a0c6",
+        "sidebar": "#101118",
+        "toolbar": "#1e2132"
+      },
+      "light": {
+        "background": "#e8e9ec",
+        "primary": "#2d539e",
+        "sidebar": "#e2e4e7",
+        "toolbar": "#dcdfe7"
+      }
+    }
+  },
+  {
+    "id": "kanagawa",
+    "name": "Kanagawa",
+    "version": "1.0.0",
+    "description": "Von Hokusais \u201eGro\u00dfer Welle\u201c inspirierte japanische Palette, extrem popul\u00e4r in Neovim.",
+    "author": "Tommaso Laurenzi (rebelot)",
+    "authorUrl": "https://github.com/rebelot/kanagawa.nvim",
+    "variantCount": 3,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/kanagawa.json",
+    "preview": {
+      "dark": {
+        "background": "#1f1f28",
+        "primary": "#7e9cd8",
+        "sidebar": "#18181f",
+        "toolbar": "#16161d"
+      },
+      "light": {
+        "background": "#f2ecbc",
+        "primary": "#4d699b",
+        "sidebar": "#f0eab3",
+        "toolbar": "#e7dba0"
+      }
+    }
+  },
+  {
     "id": "macos-classic",
     "name": "macOS Classic",
     "version": "1.0.0",
@@ -264,6 +648,30 @@
     }
   },
   {
+    "id": "molokai",
+    "name": "Molokai",
+    "version": "1.0.0",
+    "description": "Vim-Klassiker von Tomas Restrepo, Monokai-artig aber mit eigenst\u00e4ndiger, kontrastreicherer Palette.",
+    "author": "Tomas Restrepo",
+    "authorUrl": "https://github.com/tomasr/molokai",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/molokai.json",
+    "preview": {
+      "dark": {
+        "background": "#121212",
+        "primary": "#1080d0",
+        "sidebar": "#0a0a0a",
+        "toolbar": "#121212"
+      },
+      "light": {
+        "background": "#f7f7f2",
+        "primary": "#0e71b8",
+        "sidebar": "#f3f3ec",
+        "toolbar": "#eceadd"
+      }
+    }
+  },
+  {
     "id": "monokai",
     "name": "Monokai",
     "version": "1.0.0",
@@ -284,6 +692,54 @@
         "primary": "#c9920a",
         "sidebar": "#f5f5f5",
         "toolbar": "#ffffff"
+      }
+    }
+  },
+  {
+    "id": "night-owl",
+    "name": "Night Owl",
+    "version": "1.0.0",
+    "description": "Dunkelblaues Schema mit warmen Gelb/Orange-Akzenten von Sarah Drasner, eines der meistinstallierten VS-Code-Themes.",
+    "author": "Sarah Drasner",
+    "authorUrl": "https://github.com/sdras/night-owl-vscode-theme",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/night-owl.json",
+    "preview": {
+      "dark": {
+        "background": "#011627",
+        "primary": "#82AAFF",
+        "sidebar": "#010e18",
+        "toolbar": "#011627"
+      },
+      "light": {
+        "background": "#FBFBFB",
+        "primary": "#288ed7",
+        "sidebar": "#f6f6f6",
+        "toolbar": "#F0F0F0"
+      }
+    }
+  },
+  {
+    "id": "nightfox",
+    "name": "Nightfox",
+    "version": "1.0.0",
+    "description": "Hochgradig konfigurierbares Neovim-Farbfamilien-Theme (EdenEast) mit mehreren offiziellen Ablegern \u2014 Dauerbrenner in Dotfyle-Rankings.",
+    "author": "EdenEast",
+    "authorUrl": "https://github.com/EdenEast/nightfox.nvim",
+    "variantCount": 4,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/nightfox.json",
+    "preview": {
+      "dark": {
+        "background": "#192330",
+        "primary": "#719cd6",
+        "sidebar": "#141c26",
+        "toolbar": "#212e3f"
+      },
+      "light": {
+        "background": "#f6f2ee",
+        "primary": "#2848a9",
+        "sidebar": "#f2ede7",
+        "toolbar": "#e4dcd4"
       }
     }
   },
@@ -312,6 +768,54 @@
     }
   },
   {
+    "id": "nova",
+    "name": "Nova",
+    "version": "1.0.0",
+    "description": "Ruhiges, pastellig-dunkles Low-Saturation-Schema von Trevor D. Miller, in viele Editoren portiert.",
+    "author": "Trevor D. Miller",
+    "authorUrl": "https://trevordmiller.com/projects/nova",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/nova.json",
+    "preview": {
+      "dark": {
+        "background": "#3c4c55",
+        "primary": "#83afe5",
+        "sidebar": "#36444c",
+        "toolbar": "#556873"
+      },
+      "light": {
+        "background": "#eef3f4",
+        "primary": "#6199de",
+        "sidebar": "#e8eff0",
+        "toolbar": "#dde7e9"
+      }
+    }
+  },
+  {
+    "id": "oceanic-next",
+    "name": "Oceanic Next",
+    "version": "1.0.0",
+    "description": "Atom-inspiriertes Blau/T\u00fcrkis-Schema \u2014 langj\u00e4hriger Terminal- und Vim-Klassiker.",
+    "author": "voronianski",
+    "authorUrl": "https://github.com/voronianski/oceanic-next-color-scheme",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/oceanic-next.json",
+    "preview": {
+      "dark": {
+        "background": "#1b2b34",
+        "primary": "#6699cc",
+        "sidebar": "#16232a",
+        "toolbar": "#343d46"
+      },
+      "light": {
+        "background": "#eef2f3",
+        "primary": "#538cc6",
+        "sidebar": "#e8edef",
+        "toolbar": "#dde5e7"
+      }
+    }
+  },
+  {
     "id": "one",
     "name": "One",
     "version": "1.0.0",
@@ -336,6 +840,126 @@
     }
   },
   {
+    "id": "palenight",
+    "name": "Palenight",
+    "version": "1.0.0",
+    "description": "Violettstichiges Material-Theme-Derivat von Nate Peterson \u2014 eigenst\u00e4ndig sehr verbreitet (Vim, Kitty, Airline).",
+    "author": "Nate Peterson",
+    "authorUrl": "https://github.com/material-theme",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/palenight.json",
+    "preview": {
+      "dark": {
+        "background": "#292d3e",
+        "primary": "#82aaff",
+        "sidebar": "#232635",
+        "toolbar": "#444267"
+      },
+      "light": {
+        "background": "#f3f2fb",
+        "primary": "#4580ff",
+        "sidebar": "#eceaf9",
+        "toolbar": "#e6e4f7"
+      }
+    }
+  },
+  {
+    "id": "panda-syntax",
+    "name": "Panda Syntax",
+    "version": "1.0.0",
+    "description": "Markantes Dark-Theme mit Neon-Akzenten (Gr\u00fcn/Pink/Blau) von Siamak Mokhtari, popul\u00e4r in VS Code und Atom.",
+    "author": "Siamak Mokhtari",
+    "authorUrl": "https://github.com/siamak/panda-syntax-vscode",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/panda-syntax.json",
+    "preview": {
+      "dark": {
+        "background": "#292A2B",
+        "primary": "#45A9F9",
+        "sidebar": "#222223",
+        "toolbar": "#242526"
+      },
+      "light": {
+        "background": "#f5f4f6",
+        "primary": "#2c9ef8",
+        "sidebar": "#f0eef1",
+        "toolbar": "#e9e7ee"
+      }
+    }
+  },
+  {
+    "id": "papercolor",
+    "name": "PaperColor",
+    "version": "1.0.0",
+    "description": "Von Google Material Design inspiriertes, sehr sauberes Vim-Urgestein mit exzellenter 256-Farb-Terminalunterst\u00fctzung.",
+    "author": "Jon Leopard / NLKNguyen",
+    "authorUrl": "https://github.com/NLKNguyen/papercolor-theme",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/papercolor.json",
+    "preview": {
+      "dark": {
+        "background": "#1c1c1c",
+        "primary": "#5fafd7",
+        "sidebar": "#141414",
+        "toolbar": "#363636"
+      },
+      "light": {
+        "background": "#eeeeee",
+        "primary": "#005f87",
+        "sidebar": "#e9e9e9",
+        "toolbar": "#c4c4c4"
+      }
+    }
+  },
+  {
+    "id": "poimandres",
+    "name": "Poimandres",
+    "version": "1.0.0",
+    "description": "Minimalistisches, sanftes Teal/Lila-Dark-Theme, popul\u00e4r bei React- und Web-Entwicklern.",
+    "author": "Paul Henschel (drcmda)",
+    "authorUrl": "https://github.com/drcmda/poimandres-theme",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/poimandres.json",
+    "preview": {
+      "dark": {
+        "background": "#1b1e28",
+        "primary": "#89ddff",
+        "sidebar": "#15171f",
+        "toolbar": "#1b1e28"
+      },
+      "light": {
+        "background": "#FEFEFF",
+        "primary": "#8ABACD",
+        "sidebar": "#f4f4ff",
+        "toolbar": "#FEFEFF"
+      }
+    }
+  },
+  {
+    "id": "rose-pine",
+    "name": "Ros\u00e9 Pine",
+    "version": "1.0.0",
+    "description": "Soho-inspired \u201cnatine\u201d ros\u00e9tt\u00f6ne mit ged\u00e4mpftem Kontrast, eines der popul\u00e4rsten Neovim-Farbschemata.",
+    "author": "Emilia Dunfelt",
+    "authorUrl": "https://rosepinetheme.com",
+    "variantCount": 3,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/rose-pine.json",
+    "preview": {
+      "dark": {
+        "background": "#191724",
+        "primary": "#c4a7e7",
+        "sidebar": "#13111b",
+        "toolbar": "#1f1d2e"
+      },
+      "light": {
+        "background": "#faf4ed",
+        "primary": "#907aa9",
+        "sidebar": "#f8efe5",
+        "toolbar": "#fffaf3"
+      }
+    }
+  },
+  {
     "id": "sage",
     "name": "Sage",
     "version": "1.0.0",
@@ -356,6 +980,54 @@
         "primary": "#5a7a3f",
         "sidebar": "#eef1e8",
         "toolbar": "#ffffff"
+      }
+    }
+  },
+  {
+    "id": "seoul256",
+    "name": "Seoul256",
+    "version": "1.0.0",
+    "description": "Von Junegunn Choi entwickeltes koreanisch inspiriertes, sehr kontrastarmes Low-Contrast-Schema.",
+    "author": "Junegunn Choi",
+    "authorUrl": "https://github.com/junegunn/seoul256.vim",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/seoul256.json",
+    "preview": {
+      "dark": {
+        "background": "#3a3a3a",
+        "primary": "#85add4",
+        "sidebar": "#323232",
+        "toolbar": "#333333"
+      },
+      "light": {
+        "background": "#dadada",
+        "primary": "#5f87ae",
+        "sidebar": "#d5d5d5",
+        "toolbar": "#e4e4e4"
+      }
+    }
+  },
+  {
+    "id": "shades-of-purple",
+    "name": "Shades of Purple",
+    "version": "1.0.0",
+    "description": "Sehr kontrastreiches, knalliges Violett-Schema von Ahmad Awais \u2014 einer der VS-Code-Dauerbrenner.",
+    "author": "Ahmad Awais",
+    "authorUrl": "https://github.com/ahmadawais/shades-of-purple-vscode",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/shades-of-purple.json",
+    "preview": {
+      "dark": {
+        "background": "#1e1e3f",
+        "primary": "#6943ff",
+        "sidebar": "#191935",
+        "toolbar": "#43d426"
+      },
+      "light": {
+        "background": "#f4f1fb",
+        "primary": "#6943ff",
+        "sidebar": "#eee9f9",
+        "toolbar": "#e9e2f9"
       }
     }
   },
@@ -408,6 +1080,78 @@
     }
   },
   {
+    "id": "sonokai",
+    "name": "Sonokai",
+    "version": "1.0.0",
+    "description": "Sehr sattes, Monokai-Pro-inspiriertes Schema von sainnhe mit mehreren Kontrast-Presets.",
+    "author": "Sainnhe Park",
+    "authorUrl": "https://github.com/sainnhe/sonokai",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/sonokai.json",
+    "preview": {
+      "dark": {
+        "background": "#2c2e34",
+        "primary": "#76cce0",
+        "sidebar": "#25272c",
+        "toolbar": "#33353f"
+      },
+      "light": {
+        "background": "#f5f3ea",
+        "primary": "#38b5d2",
+        "sidebar": "#f2efe3",
+        "toolbar": "#e9e5d3"
+      }
+    }
+  },
+  {
+    "id": "spacegray",
+    "name": "Spacegray",
+    "version": "1.0.0",
+    "description": "Dezentes Grau-Blau-Schema, urspr\u00fcnglich ein Sublime-Text-Theme, breit in Terminals portiert.",
+    "author": "Kris Gunnars / kkga",
+    "authorUrl": "https://github.com/kkga/spacegray",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/spacegray.json",
+    "preview": {
+      "dark": {
+        "background": "#20242d",
+        "primary": "#7d8fa4",
+        "sidebar": "#1a1d24",
+        "toolbar": "#2b2f38"
+      },
+      "light": {
+        "background": "#eceef2",
+        "primary": "#6e829a",
+        "sidebar": "#e6e9ee",
+        "toolbar": "#dde0e6"
+      }
+    }
+  },
+  {
+    "id": "synthwave-84",
+    "name": "SynthWave '84",
+    "version": "1.0.0",
+    "description": "Neon-pinke/violette 80er-Retrowave-\u00c4sthetik mit optionalem Glow-Effekt \u2014 eines der meistinstallierten Retro-Themes.",
+    "author": "Robb Owen",
+    "authorUrl": "https://github.com/robb0wen/synthwave-vscode",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/synthwave-84.json",
+    "preview": {
+      "dark": {
+        "background": "#262335",
+        "primary": "#03edf9",
+        "sidebar": "#1f1d2c",
+        "toolbar": "#241b2f"
+      },
+      "light": {
+        "background": "#f6eefc",
+        "primary": "#02b3bd",
+        "sidebar": "#f1e5fa",
+        "toolbar": "#ecdff7"
+      }
+    }
+  },
+  {
     "id": "tokyo-night",
     "name": "Tokyo Night",
     "version": "1.0.0",
@@ -432,6 +1176,54 @@
     }
   },
   {
+    "id": "tomorrow",
+    "name": "Tomorrow",
+    "version": "1.0.0",
+    "description": "Einer der einflussreichsten Ur-Ports (Chris Kempson) f\u00fcr Sublime, Vim und Terminals \u2014 Grundlage vieler sp\u00e4terer Themes.",
+    "author": "Chris Kempson",
+    "authorUrl": "https://github.com/chriskempson/tomorrow-theme",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/tomorrow.json",
+    "preview": {
+      "dark": {
+        "background": "#1d1f21",
+        "primary": "#81a2be",
+        "sidebar": "#161719",
+        "toolbar": "#282a2e"
+      },
+      "light": {
+        "background": "#ffffff",
+        "primary": "#4271ae",
+        "sidebar": "#fafafa",
+        "toolbar": "#e0e0e0"
+      }
+    }
+  },
+  {
+    "id": "vitesse",
+    "name": "Vitesse",
+    "version": "1.0.0",
+    "description": "Ruhiges, augenschonendes Schema von Anthony Fu (antfu), verbreitet \u00fcber VS Code und das UnoCSS-\u00d6kosystem.",
+    "author": "Anthony Fu",
+    "authorUrl": "https://github.com/antfu/vscode-theme-vitesse",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/vitesse.json",
+    "preview": {
+      "dark": {
+        "background": "#121212",
+        "primary": "#6394bf",
+        "sidebar": "#0a0a0a",
+        "toolbar": "#121212"
+      },
+      "light": {
+        "background": "#ffffff",
+        "primary": "#296aa3",
+        "sidebar": "#fafafa",
+        "toolbar": "#ffffff"
+      }
+    }
+  },
+  {
     "id": "vscode-modern",
     "name": "VSCode Modern",
     "version": "1.0.0",
@@ -452,6 +1244,54 @@
         "primary": "#005fb8",
         "sidebar": "#f8f8f8",
         "toolbar": "#f8f8f8"
+      }
+    }
+  },
+  {
+    "id": "winter-is-coming",
+    "name": "Winter is Coming",
+    "version": "1.0.0",
+    "description": "Popul\u00e4res Blau-Theme von John Papa, weit verbreitet in VS Code und Sublime Text.",
+    "author": "John Papa",
+    "authorUrl": "https://github.com/johnpapa/vscode-winteriscoming",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/winter-is-coming.json",
+    "preview": {
+      "dark": {
+        "background": "#011627",
+        "primary": "#219fd5",
+        "sidebar": "#010e18",
+        "toolbar": "#011627"
+      },
+      "light": {
+        "background": "#FFFFFF",
+        "primary": "#236ebf",
+        "sidebar": "#fafafa",
+        "toolbar": "#F3F3F3"
+      }
+    }
+  },
+  {
+    "id": "zenburn",
+    "name": "Zenburn",
+    "version": "1.0.0",
+    "description": "Extrem kontrastarmes, augenschonendes Gr\u00fcn/Grau-Retro-Schema mit Wurzeln in Emacs, seit Jahrzehnten portiert.",
+    "author": "elnawe (base16 port)",
+    "authorUrl": "https://github.com/elnawe",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/zenburn.json",
+    "preview": {
+      "dark": {
+        "background": "#383838",
+        "primary": "#7cb8bb",
+        "sidebar": "#303030",
+        "toolbar": "#404040"
+      },
+      "light": {
+        "background": "#e7e4d6",
+        "primary": "#5aa6aa",
+        "sidebar": "#e3e0d0",
+        "toolbar": "#dcd8c5"
       }
     }
   }
