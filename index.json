@@ -144,20 +144,92 @@
     }
   },
   {
-    "id": "catppuccin",
-    "name": "Catppuccin",
+    "id": "catppuccin-frappe",
+    "name": "Catppuccin Frapp\u00e9",
     "version": "1.0.0",
-    "description": "Soothing pastel theme \u2014 Latte (light), Frapp\u00e9, Macchiato, Mocha (dark)",
+    "description": "Soothing pastel theme \u2014 Frapp\u00e9 (dark) paired with Latte (light)",
     "author": "Catppuccin",
     "authorUrl": "https://github.com/catppuccin",
-    "variantCount": 4,
-    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/catppuccin.json",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/catppuccin-frappe.json",
     "preview": {
       "dark": {
         "background": "#303446",
         "primary": "#ca9ee6",
         "sidebar": "#292c3c",
         "toolbar": "#292c3c"
+      },
+      "light": {
+        "background": "#eff1f5",
+        "primary": "#8839ef",
+        "sidebar": "#e6e9ef",
+        "toolbar": "#e6e9ef"
+      }
+    }
+  },
+  {
+    "id": "catppuccin-latte",
+    "name": "Catppuccin Latte",
+    "version": "1.0.0",
+    "description": "Soothing pastel theme \u2014 Latte (light) paired with Mocha (dark)",
+    "author": "Catppuccin",
+    "authorUrl": "https://github.com/catppuccin",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/catppuccin-latte.json",
+    "preview": {
+      "dark": {
+        "background": "#1e1e2e",
+        "primary": "#cba6f7",
+        "sidebar": "#181825",
+        "toolbar": "#181825"
+      },
+      "light": {
+        "background": "#eff1f5",
+        "primary": "#8839ef",
+        "sidebar": "#e6e9ef",
+        "toolbar": "#e6e9ef"
+      }
+    }
+  },
+  {
+    "id": "catppuccin-macchiato",
+    "name": "Catppuccin Macchiato",
+    "version": "1.0.0",
+    "description": "Soothing pastel theme \u2014 Macchiato (dark) paired with Latte (light)",
+    "author": "Catppuccin",
+    "authorUrl": "https://github.com/catppuccin",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/catppuccin-macchiato.json",
+    "preview": {
+      "dark": {
+        "background": "#24273a",
+        "primary": "#c6a0f6",
+        "sidebar": "#1e2030",
+        "toolbar": "#1e2030"
+      },
+      "light": {
+        "background": "#eff1f5",
+        "primary": "#8839ef",
+        "sidebar": "#e6e9ef",
+        "toolbar": "#e6e9ef"
+      }
+    }
+  },
+  {
+    "id": "catppuccin-mocha",
+    "name": "Catppuccin Mocha",
+    "version": "1.0.0",
+    "description": "Soothing pastel theme \u2014 Mocha (dark) paired with Latte (light)",
+    "author": "Catppuccin",
+    "authorUrl": "https://github.com/catppuccin",
+    "variantCount": 2,
+    "rawUrl": "https://raw.githubusercontent.com/Snenjih/labonair-themes/main/themes/catppuccin-mocha.json",
+    "preview": {
+      "dark": {
+        "background": "#1e1e2e",
+        "primary": "#cba6f7",
+        "sidebar": "#181825",
+        "toolbar": "#181825"
       },
       "light": {
         "background": "#eff1f5",
